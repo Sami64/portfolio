@@ -31,7 +31,7 @@ export default function Home({
 	socials,
 }: Props) {
 	return (
-		<div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+		<div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#329F5B]/80">
 			<Head>
 				<title>Samuel Kow Paintsil</title>
 			</Head>
@@ -40,16 +40,16 @@ export default function Home({
 				<Hero pageInfo={pageInfo} />
 			</section>
 			<section id="about" className="snap-center">
-				<About />
+				<About pageInfo={pageInfo} />
 			</section>
 			<section id="experience" className="snap-center">
-				<WorkExperience />
+				<WorkExperience experiences={experiences} />
 			</section>
 			<section id="skills" className="snap-start">
-				<Skills />
+				<Skills skills={skills} />
 			</section>
 			<section id="projects" className="snap-start">
-				<Projects />
+				<Projects projects={projects} />
 			</section>
 			<section id="contact" className="snap-start">
 				<ContactMe />

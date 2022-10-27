@@ -26,24 +26,24 @@ const ContactMe = (props: Props) => {
 			</h3>
 			<div className="flex flex-col space-y-10">
 				<h4 className="text-4xl  font-semibold text-center">
-					<span className="decoration-[#F7AB0A]/50 underline capitalize">
+					<span className="decoration-[#329F5B]/50 underline capitalize">
 						lets talk.
 					</span>
 				</h4>
 
 				<div className="space-y-10">
 					<div className="flex items-center space-x-5">
-						<PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+						<PhoneIcon className="text-[#329F5B] h-7 w-7 animate-pulse" />
 						<p>+233501083601</p>
 					</div>
 
 					<div className="flex items-center space-x-5">
-						<EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+						<EnvelopeIcon className="text-[#329F5B] h-7 w-7 animate-pulse" />
 						<p>smashbros54@gmail.com</p>
 					</div>
 
 					<div className="flex items-center space-x-5">
-						<MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+						<MapPinIcon className="text-[#329F5B] h-7 w-7 animate-pulse" />
 						<p>KNUST</p>
 					</div>
 				</div>
@@ -78,7 +78,7 @@ const ContactMe = (props: Props) => {
 					/>
 					<button
 						type="submit"
-						className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg">
+						className="bg-[#329F5B] py-5 px-10 rounded-md text-black font-bold text-lg capitalize">
 						submit
 					</button>
 				</form>

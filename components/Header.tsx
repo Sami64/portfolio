@@ -15,7 +15,7 @@ const Header = ({ socials }: Props) => {
 				{socials.map((social) => (
 					<SocialIcon
 						key={social._id}
-						url="twitter.com"
+						url={social.url}
 						fgColor="gray"
 						bgColor="transparent"
 					/>
@@ -26,14 +26,14 @@ const Header = ({ socials }: Props) => {
 					initial={{ x: 500, opacity: 0, scale: 0.5 }}
 					animate={{ x: 0, opacity: 1, scale: 1 }}
 					transition={{ duration: 1.5 }}
-					className="flex flex-row items-center text-gray-300 cursor-pointer">
+					className="flex flex-row items-center text-gray-300 cursor-pointer ">
 					<SocialIcon
 						network="email"
 						fgColor="gray"
 						bgColor="transparent"
-						className="cursor-pointer"
+						className="cursor-pointer "
 					/>
-					<p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+					<p className="uppercase hidden md:inline-flex text-sm text-gray-400 hover:text-[#329F5B]">
 						get in touch
 					</p>
 				</motion.div>

@@ -6,16 +6,56 @@ type Props = {
 }
 
 const Projects = ({ projects }: Props) => {
+	const letters = Array.from("projects")
+
+	const container = {
+		hidden: { opacity: 0 },
+		visible: (i = 1) => ({
+			opacity: 1,
+			transition: { staggerChildren: 0.03, delayChildren: 0.04 * i },
+		}),
+	}
+
+	const child = {
+		visible: {
+			opacity: 1,
+			x: 0,
+			y: 0,
+			transition: {
+				type: "spring",
+				damping: 12,
+				stiffness: 100,
+			},
+		},
+		hidden: {
+			opacity: 0,
+			x: -20,
+			y: 10,
+			transition: {
+				type: "spring",
+				damping: 12,
+				stiffness: 100,
+			},
+		},
+	}
+
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1.5 }}
 			className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0 ">
-			<h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
-				projects
-			</h3>
-			<div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+			<motion.div
+				initial={{ x: -500, opacity: 0, scale: 0.5 }}
+				animate={{ x: 0, opacity: 1, scale: 1 }}
+				transition={{ duration: 1.5 }}
+				whileInView={{ x: 0, opacity: 1 }}
+				className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+				{letters.map((letter, index) => (
+					<motion.span key={index}>{letter}</motion.span>
+				))}
+			</motion.div>
+			<div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#329F5B]/80">
 				{projects.map((project, i) => (
 					<div
 						key={project._id}
@@ -30,7 +70,7 @@ const Projects = ({ projects }: Props) => {
 						/>
 						<div className="space-y-10 px-0 md:px-10 max-w-6xl">
 							<h4 className="text-4xl font-semibold text-center">
-								<span className="underline decoration-[#F7AB0A]/50">
+								<span className="underline decoration-[#329F5B]/50">
 									Case study {i + 1} of {projects.length}:
 								</span>{" "}
 								{project?.title}
@@ -51,7 +91,7 @@ const Projects = ({ projects }: Props) => {
 					</div>
 				))}
 			</div>
-			<div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"></div>
+			<div className="w-full absolute top-[30%] bg-[#329F5B]/10 left-0 h-[500px] -skew-y-12"></div>
 		</motion.div>
 	)
 }
