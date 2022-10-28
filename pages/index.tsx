@@ -78,6 +78,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
 	return {
 		props: { pageInfo, skills, experiences, projects, socials },
-		revalidate: 10,
+		//revalidate: 10,
 	}
 }
