@@ -8,6 +8,7 @@ import Hero from "../components/Hero"
 import Projects from "../components/Projects"
 import Skills from "../components/Skills"
 import WorkExperience from "../components/WorkExperience"
+import { urlFor } from "../sanity"
 import { Experience, PageInfo, Project, Skill, Social } from "../typings"
 import { fetchExperiences } from "../utils/fetchExperiences"
 import { fetchPageInfo } from "../utils/fetchPageInfo"
@@ -31,41 +32,43 @@ export default function Home({
 	socials,
 }: Props) {
 	return (
-		<div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#329F5B]/80">
+		<>
 			<Head>
 				<title>Samuel Kow Paintsil</title>
 			</Head>
-			<Header socials={socials} />
-			<section id="hero" className="snap-start">
-				<Hero pageInfo={pageInfo} />
-			</section>
-			<section id="about" className="snap-center">
-				<About pageInfo={pageInfo} />
-			</section>
-			<section id="experience" className="snap-center">
-				<WorkExperience experiences={experiences} />
-			</section>
-			<section id="skills" className="snap-start">
-				<Skills skills={skills} />
-			</section>
-			<section id="projects" className="snap-start">
-				<Projects projects={projects} />
-			</section>
-			<section id="contact" className="snap-start">
-				<ContactMe />
-			</section>
-			<Link href="#hero">
-				<footer className="sticky bottom-5 w-full cursor-pointer">
-					<div className="flex items-center justify-center">
-						<img
-							className="w-10 h-10 rounded-full grayscale filter hover:grayscale-0"
-							src="https://i.imgur.com/e2yvD6A.png"
-							alt=""
-						/>
-					</div>
-				</footer>
-			</Link>
-		</div>
+			<div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#329F5B]/80">
+				<Header socials={socials} />
+				<section id="hero" className="snap-start">
+					<Hero pageInfo={pageInfo} />
+				</section>
+				<section id="about" className="snap-center">
+					<About pageInfo={pageInfo} />
+				</section>
+				<section id="experience" className="snap-center">
+					<WorkExperience experiences={experiences} />
+				</section>
+				<section id="skills" className="snap-start">
+					<Skills skills={skills} />
+				</section>
+				<section id="projects" className="snap-start">
+					<Projects projects={projects} />
+				</section>
+				<section id="contact" className="snap-start">
+					<ContactMe />
+				</section>
+				<Link href="#hero">
+					<footer className="sticky bottom-5 w-full cursor-pointer">
+						<div className="flex items-center justify-center">
+							<img
+								className="w-10 h-10 rounded-full grayscale filter hover:grayscale-0"
+								src={urlFor(pageInfo.heroImage).url()}
+								alt=""
+							/>
+						</div>
+					</footer>
+				</Link>
+			</div>
+		</>
 	)
 }
 
