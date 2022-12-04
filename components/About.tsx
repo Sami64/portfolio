@@ -26,7 +26,7 @@ const About = ({ pageInfo }: Props) => {
 			/>
 
 			<div className="space-y-10 px-10 md:px-10">
-				<h4 className="text-4xl font-semibold">Some Sami?</h4>
+				<h4 className="text-4xl font-semibold">So Sami?</h4>
 				<p>{pageInfo?.backgroundInformation}</p>
 			</div>
 		</motion.div>
