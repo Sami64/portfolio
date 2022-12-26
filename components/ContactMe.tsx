@@ -39,7 +39,7 @@ const ContactMe = (props: Props) => {
 
 					<div className="flex items-center space-x-5">
 						<EnvelopeIcon className="text-[#329F5B] h-7 w-7 animate-pulse" />
-						<p>sapaintsil@outlook.com</p>
+						<p>skpaintsil@outlook.com</p>
 					</div>
 
 					<div className="flex items-center space-x-5">
