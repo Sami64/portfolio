@@ -34,7 +34,7 @@ const ContactMe = (props: Props) => {
 				<div className="space-y-10">
 					<div className="flex items-center space-x-5">
 						<PhoneIcon className="text-[#329F5B] h-7 w-7 animate-pulse" />
-						<p>+233501083601</p>
+						<p>+23350108301</p>
 					</div>
 
 					<div className="flex items-center space-x-5">
