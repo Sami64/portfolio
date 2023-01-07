@@ -1,5 +1,5 @@
-import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid"
-import { SubmitHandler, useForm } from "react-hook-form"
+import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid'
+import { SubmitHandler, useForm } from 'react-hook-form'
 
 type Props = {}
 
@@ -27,7 +27,7 @@ const ContactMe = (props: Props) => {
 			<div className="flex flex-col space-y-10">
 				<h4 className="text-4xl  font-semibold text-center">
 					<span className="decoration-[#329F5B]/50 underline capitalize">
-						lets connect.
+						connect.
 					</span>
 				</h4>
 
@@ -53,26 +53,26 @@ const ContactMe = (props: Props) => {
 					className="flex flex-col space-y-2 w-fit mx-auto">
 					<div className="flex space-x-2">
 						<input
-							{...register("name")}
+							{...register('name')}
 							placeholder="Name"
 							className="contactInput"
 							type="text"
 						/>
 						<input
-							{...register("email")}
+							{...register('email')}
 							placeholder="Email"
 							className="contactInput"
 							type="email"
 						/>
 					</div>
 					<input
-						{...register("subject")}
+						{...register('subject')}
 						placeholder="Subject"
 						className="contactInput"
 						type="text"
 					/>
 					<textarea
-						{...register("message")}
+						{...register('message')}
 						placeholder="Message"
 						className="contactInput"
 					/>
