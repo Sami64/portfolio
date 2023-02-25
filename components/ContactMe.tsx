@@ -27,7 +27,7 @@ const ContactMe = (props: Props) => {
 			<div className="flex flex-col space-y-10">
 				<h4 className="text-4xl  font-semibold text-center">
 					<span className="decoration-[#329F5B]/50 underline capitalize">
-						connect with me
+						connect
 					</span>
 				</h4>
 
