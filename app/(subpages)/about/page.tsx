@@ -1,6 +1,6 @@
 import AboutDetails from '@/app/components/about'
 import Headset from '@/app/components/models/Headset'
-import bg from '@/public/assets/backgrounds/background1.jpeg'
+import bg from '@/public/assets/backgrounds/about.jpeg'
 import Image from 'next/image'
 import RenderModel from '../../components/RenderModel'
 

@@ -1,5 +1,5 @@
 import { projectsData } from '@/lib/data'
-import bg from '@/public/assets/backgrounds/background1.jpeg'
+import bg from '@/public/assets/backgrounds/projects.jpeg'
 import Image from 'next/image'
 import RenderModel from '../../components/RenderModel'
 import Keyboard from '../../components/models/Keyboard'
