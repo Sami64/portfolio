@@ -97,11 +97,11 @@ type ActionName = 'Take 001'
 type GLTFActions = Record<ActionName, THREE.AnimationAction>
 
 export default function Guitar(props: JSX.IntrinsicElements['group']) {
-	const group = useRef<THREE.Group>()
+	const group = useRef<THREE.Group | null>(null)
 	const { nodes, materials, animations } = useGLTF(
-        '/assets/models/guitarra_2.0.glb'
-    ) as unknown as GLTFResult
-	const { actions } = useAnimations<GLTFActions>(animations, group)
+		'/assets/models/guitarra_2.0.glb'
+	) as unknown as GLTFResult
+	const { actions } = useAnimations(animations as THREE.AnimationClip[], group)
 
 	useFrame((state, delta, xrFrame) => {
 		if (group.current != null)
