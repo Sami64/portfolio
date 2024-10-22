@@ -39,6 +39,14 @@ export const projectsData = [
 		demoLink: 'https://pdf-whisperer-drab.vercel.app/',
 	},
 	{
+		id: 6,
+		name: 'Slack Clone',
+		description:
+			'A slack clone with slack like functionality. Chat with your friends and colleagues. PS: Still in development',
+		date: '2022-06-15',
+		demoLink: 'https://slack-clone-v2.vercel.app/',
+	},
+	{
 		id: 2,
 		name: 'Childhood Cancer Society of Ghana Website/Donation Platform',
 		description:
@@ -71,13 +79,4 @@ export const projectsData = [
 		demoLink:
 			'https://play.google.com/store/search?q=flip%20delivery&c=apps&hl=en_419',
 	},
-	// {
-	// 	id: 6,
-	// 	name: 'Slack Clone',
-	// 	description:
-	// 		'A slack clone with slack like functionality. Chat with your friends and colleagues. PS: Still in development',
-	// 	date: '2022-06-15',
-	// 	demoLink:
-	// 		'https://play.google.com/store/search?q=flip%20delivery&c=apps&hl=en_419',
-	// },
 ]
